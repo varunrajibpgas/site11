@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-surface: #0c1510;
+  --color-surface-dim: #0c1510;
+  --color-surface-bright: #313b36;
+  --color-surface-container-lowest: #07100b;
+  --color-surface-container-low: #141e18;
+  --color-surface-container: #18221c;
+  --color-surface-container-high: #222c27;
+  --color-surface-container-highest: #2d3731;
+  --color-on-surface: #dae5dd;
+  --color-on-surface-variant: #c0c9be;
+
+  --color-deep-forest: #092B1D;
+  --color-dark-surface: #10251B;
+  --color-warm-off-white: #F7F8F3;
+  --color-surface-white: #FFFFFF;
+
+  --color-primary-dark: #14532D;
+  --color-primary-light: #96d5a3;
+  --color-accent-parrot: #65C466;
+  --color-accent-lime: #B7F36B;
+  --color-cylinder-orange: #E85912;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #0c1510;
+  color: #dae5dd;
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: var(--font-display);
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0c1510;
+}
+::-webkit-scrollbar-thumb {
+  background: #222c27;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #313b36;
+}
+
+/* Print specific styles for quote & prospectus */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
